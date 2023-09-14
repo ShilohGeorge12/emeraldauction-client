@@ -4,12 +4,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 export default function App() {
 	return (
-		<article className='flex flex-col items-center w-screen h-screen gap-2 font-poppins'>
+		<article className='flex flex-col items-center gap-2 font-poppins scroll-smooth'>
 			<Router>
 				<NavBar />
-				<div className='overflow-y-scroll'>
+				<section className='flex-1 overflow-y-scroll'>
 					<AllRoutes />
-				</div>
+				</section>
 			</Router>
 		</article>
 	);
