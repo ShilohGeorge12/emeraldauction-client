@@ -1,36 +1,56 @@
-import { Img } from '@chakra-ui/image';
+import { Image } from '@chakra-ui/image';
+import Card from '../../components/card';
+import { Cars } from '../../types';
+import { LoadingHomeBG } from '../../components/loading';
 
 export default function Home() {
+	const data: Cars[] = [
+		{
+			_id: '1',
+			src: '/cars/rav4-400.png',
+			price: 6000000,
+			title: 'Toyota Rav 4',
+		},
+		{
+			_id: '2',
+			src: '/cars/rav4-400.png',
+			price: 5000000,
+			title: 'Toyota Rav 4',
+		},
+		{
+			_id: '3',
+			src: '/cars/rav4-400.png',
+			price: 4500000,
+			title: 'Toyota Rav 4',
+		},
+	];
 	return (
-		<section className={`w-full flex flex-col items-center justify-center`}>
+		<section className={`w-full flex flex-col items-center justify-center mb-4`}>
 			<div className='flex items-start justify-center w-full lg:justify-end'>
-				<Img
+				<Image
 					src='/cars/rav4-1024.png'
-					// srcSet=''
 					alt='__'
 					loading='eager'
 					className={`w-[80%] lg:w-3/4 object-cover fixed right-1 top-[163px] md:top-auto bg-center -z-10 brightness-125`}
+					fallback={<LoadingHomeBG />}
 				/>
 			</div>
 			<div className='md:h-[90vh] h-[40vh] w-full flex justify-start p-1'>
-				{/* <p className='inline text-sm lg:text-2xl font-semibold text-green-600 w-[150px] md:w-[550px] ml-20 text-justify'>
-					Rev up your dreams with Emerald Leasing Ltd. Welcome to a world of automotive excellence and exclusive auctions, where your journey to owning quality cars
-					begins.
-				</p> */}
 				<p className='text-sm font-semibold text-green-600 lg:text-2xl w-[295px] md:w-[570px] capitalize md:ml-16'>
 					Rev up your dreams with Emerald Leasing Ltd. Welcome to a world of automotive excellence and exclusive auctions, where your journey to owning quality cars
 					begins.
 				</p>
 			</div>
-			<div className='w-full'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laborum ullam, delectus explicabo quod itaque totam animi non cupiditate! Earum incidunt suscipit
-				alias fuga distinctio voluptatem excepturi perspiciatis rerum velit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laborum ullam, delectus
-				explicabo quod itaque totam animi non cupiditate! Earum incidunt suscipit alias fuga distinctio voluptatem excepturi perspiciatis rerum velit! Lorem ipsum dolor
-				sit amet consectetur adipisicing elit. Sed laborum ullam, delectus explicabo quod itaque totam animi non cupiditate! Earum incidunt suscipit alias fuga distinctio
-				voluptatem excepturi perspiciatis rerum velit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laborum ullam, delectus explicabo quod itaque totam
-				animi non cupiditate! Earum incidunt suscipit alias fuga distinctio voluptatem excepturi perspiciatis rerum velit! Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Sed laborum ullam, delectus explicabo quod itaque totam animi non cupiditate! Earum incidunt suscipit alias fuga distinctio voluptatem excepturi
-				perspiciatis rerum velit!
+			<div className='grid w-full gap-4 px-4 md:grid-cols-3 md:grid-rows-3'>
+				{data.length > 0 &&
+					data.map((car) => (
+						<Card
+							_id={car._id}
+							src={car.src}
+							title={car.title}
+							price={car.price}
+						/>
+					))}
 			</div>
 		</section>
 	);
