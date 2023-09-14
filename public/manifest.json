@@ -1,0 +1,46 @@
+{
+	"name": "Emerald Auction",
+	"description": "Emerald Auction enables emerald to display, auction cars to customers and dealers.",
+	"short_name": "Emerald Auction",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"theme_color": "rgb(203 213 225)",
+	"background_color": "rgb(203 213 225)",
+	"lang": "en",
+	"icons": [
+		{
+			"src": "/images/emeraldicon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/emeraldicon-64.png",
+			"sizes": "64x64",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/emeraldicon-256.png",
+			"sizes": "256x256",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "/images/emeraldicon-500.png",
+			"sizes": "500x500",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "/images/emeraldLogo-150.png",
+			"sizes": "148x69",
+			"type": "image/png"
+		}
+	],
+	"protocol_handlers": [
+		{
+			"protocol": "web+emeraldauction",
+			"url": "https://emeraldauction.netlify.app/%s"
+		}
+	]
+}
