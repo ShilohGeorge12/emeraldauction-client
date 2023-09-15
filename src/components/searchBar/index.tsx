@@ -18,7 +18,7 @@ export const SearchBar = ({ value, placeholder, onSearch, Icon }: SearchBarProps
 				placeholder={placeholder}
 				value={value}
 				onChange={onSearch}
-				className='w-full h-12 px-3 text-sm font-semibold tracking-wider text-green-500 border-2 border-white shadow-xl lg:text-xl rounded-xl shadow-black/10 group-hover:shadow-green-300 group-hover:border-green-300 outline-0 placeholder:text-green-400'
+				className='w-full h-12 px-3 text-sm font-semibold tracking-wider text-green-500 border-2 border-gray-300 shadow-xl lg:text-xl rounded-xl shadow-black/10 group-hover:shadow-green-300 group-hover:border-green-300 outline-0 placeholder:text-gray-400 hover:placeholder:text-green-400'
 			/>
 			<span className='absolute text-xl top-[13px] right-3 text-gray-500 group-hover:text-green-400'>
 				<Icon />

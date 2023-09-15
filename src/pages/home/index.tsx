@@ -31,12 +31,12 @@ export default function Home() {
 					src='/cars/rav4-1024.png'
 					alt='__'
 					loading='eager'
-					className={`w-[80%] lg:w-3/4 object-cover fixed right-1 top-[163px] md:top-auto bg-center -z-10 brightness-125`}
+					className={`w-[90%] lg:w-3/4 object-cover fixed right-1 top-[163px] md:top-auto bg-center -z-10 brightness-125`}
 					fallback={<LoadingHomeBG />}
 				/>
 			</div>
 			<div className='md:h-[90vh] h-[40vh] w-full flex justify-start p-1'>
-				<p className='text-sm font-semibold text-green-600 lg:text-2xl w-[295px] md:w-[570px] capitalize md:ml-16'>
+				<p className='text-sm font-semibold text-green-600 lg:text-2xl w-[310px] md:w-[570px] capitalize md:ml-16 px-1 md:px-0'>
 					Rev up your dreams with Emerald Leasing Ltd. Welcome to a world of automotive excellence and exclusive auctions, where your journey to owning quality cars
 					begins.
 				</p>
@@ -45,6 +45,7 @@ export default function Home() {
 				{data.length > 0 &&
 					data.map((car) => (
 						<Card
+							key={car._id}
 							_id={car._id}
 							src={car.src}
 							title={car.title}
