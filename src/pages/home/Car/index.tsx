@@ -1,16 +1,15 @@
 // import { useEffect } from "react";
 import { useMyContext } from '../../../context';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Image } from '@chakra-ui/image';
 import { LoadingMainCar, LoadingOtherCar } from '../../../components/loading';
-import { FaHome } from 'react-icons/fa';
 import { useEffect } from 'react';
+import { UseMetaData } from '../../../hooks/useMetaData';
 
 export default function Car() {
 	const {
 		state: { cars },
 	} = useMyContext();
-	const naviTo = useNavigate();
 	const { carId } = useParams();
 	const car = cars.find((car) => car._id === carId) ?? 'undefined';
 
@@ -30,14 +29,12 @@ export default function Car() {
 	const number = '08151380885';
 
 	return (
-		<section className={`relative w-full min-h-[70vh] flex flex-col gap-2 p-4 overflow-x-hidden`}>
-			<button
-				type='button'
-				name={`back to home`}
-				className={`w-fit text-sm p-2 text-white bg-green-400 rounded-lg -top-2 left-0`}
-				onClick={() => naviTo('/')}>
-				<FaHome />
-			</button>
+		<section className={`relative w-full min-h-[70vh] flex flex-col gap-4 p-4 overflow-x-hidden`}>
+			<UseMetaData
+				title={`${title} | Emerald Leasing Ltd - Quality Cars for Sale and Auctions`}
+				description={''}
+				urlPath={`/${carId}`}
+			/>
 			<section className='grid w-full grid-cols-1 lg:grid-cols-3'>
 				<Image
 					src={src[0]}
@@ -45,7 +42,7 @@ export default function Car() {
 					alt={title}
 					loading='lazy'
 					fallback={<LoadingMainCar />}
-					className={`w-full col-span-2 rounded-xl object-cover border-2 border-green-500`}
+					className={`w-full col-span-2 rounded-xl object-cover border-2 border-green-500 transition duration-500 ease-in-out hover:scale-105`}
 				/>
 				<div className='flex flex-col items-center w-full justify-evenly'>
 					<Image
@@ -53,7 +50,7 @@ export default function Car() {
 						title={title}
 						alt={title}
 						loading='lazy'
-						className='w-[90%] object-cover rounded-xl'
+						className='w-[90%] object-cover rounded-xl border-2 border-green-500 transition duration-500 ease-in-out hover:scale-105'
 						fallback={
 							<LoadingOtherCar
 								width='w-[323px]'
@@ -66,7 +63,7 @@ export default function Car() {
 						title={title}
 						alt={title}
 						loading='lazy'
-						className='w-[90%] object-cover rounded-xl'
+						className='w-[90%] object-cover rounded-xl border-2 border-green-500 transition duration-500 ease-in-out hover:scale-105'
 						fallback={
 							<LoadingOtherCar
 								width='w-[323px]'
@@ -82,7 +79,7 @@ export default function Car() {
 					title={title}
 					alt={title}
 					loading='lazy'
-					className='object-cover w-[30%] rounded-xl'
+					className='object-cover w-[30%] rounded-xl border-2 border-green-500 transition duration-500 ease-in-out hover:scale-105'
 					fallback={
 						<LoadingOtherCar
 							width='w-[323px]'
@@ -95,7 +92,7 @@ export default function Car() {
 					title={title}
 					alt={title}
 					loading='lazy'
-					className='object-cover w-[30%] rounded-xl'
+					className='object-cover w-[30%] rounded-xl border-2 border-green-500 transition duration-500 ease-in-out hover:scale-105'
 					fallback={
 						<LoadingOtherCar
 							width='w-[323px]'
@@ -108,7 +105,7 @@ export default function Car() {
 					title={title}
 					alt={title}
 					loading='lazy'
-					className='object-cover w-[30%] rounded-xl'
+					className='object-cover w-[30%] rounded-xl border-2 border-green-500 transition duration-500 ease-in-out hover:scale-105'
 					fallback={
 						<LoadingOtherCar
 							width='w-[323px]'
@@ -118,7 +115,7 @@ export default function Car() {
 				/>
 			</div>
 			<section className='bg-green-100 w-[98%] mx-auto rounded-xl min-h-[30vh] p-2 lg:px-6 flex flex-col gap-2 justify-center'>
-				<h3 className='text-3xl font-semibold text-gray-600 lg:text-4xl '>{title}</h3>
+				<h1 className='text-3xl font-semibold text-gray-600 lg:text-4xl '>{title}</h1>
 				<ul className='flex items-center gap-4 text-sm list-none lg:text-base'>
 					<li className='p-2 tracking-wider text-white bg-green-500 rounded-lg w-fit'>&#x20A6; {price.toLocaleString()}</li>
 					<li className='p-2 text-white bg-gray-500 rounded-lg w-fit'>{mileage.toLocaleString()} miles</li>

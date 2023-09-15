@@ -33,8 +33,7 @@ export default function Home() {
 		<section className={`w-full flex flex-col items-center justify-center mb-4`}>
 			<UseMetaData
 				title='Emerald Leasing Ltd - Quality Cars for Sale and Auctions'
-				description='Emerald Leasing Ltd is your gateway to the world of premium car sales and thrilling auctions. Our mission is simple: to provide you with a one-stop platform
-        where you can find quality used cars and affordable vehicles that suit your preferences and budget.'
+				description='Discover a wide selection of quality cars for sale and auction at Emerald Leasing Ltd. Explore our inventory of well-maintained vehicles and find your dream car today'
 				urlPath='/'
 			/>
 			<article

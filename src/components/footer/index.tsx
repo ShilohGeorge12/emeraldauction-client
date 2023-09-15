@@ -8,6 +8,7 @@ export const Footer = () => {
 				<Image
 					src={'/images/emerald_logo_149.png'}
 					alt={'Emerald Leasing LTD'}
+					title={'Emerald Leasing LTD'}
 					loading={'eager'}
 					className={`w-24 md:w-36 object-cover hover:bg-white transition ease-in-out duration-500 hover:scale-105 brightness-100 rounded-xl p-2`}
 					fallback={<LoadingNavImage />}
