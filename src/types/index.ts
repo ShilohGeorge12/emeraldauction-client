@@ -1,8 +1,8 @@
 export interface contextState {
-	str: '';
+	cars: Cars[];
 }
 
-type contextAction = { type: ''; payload: { str: '' } };
+type contextAction = { type: 'cars'; payload: { cars: Cars[] } };
 export type reducerFn = (state: contextState, action: contextAction) => contextState;
 
 export interface Cars {
@@ -10,4 +10,5 @@ export interface Cars {
 	readonly src: string;
 	readonly title: string;
 	readonly price: number;
+	readonly mileage: number;
 }

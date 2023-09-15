@@ -1,8 +1,46 @@
 import { useContext, useReducer, createContext } from 'react';
-import { contextState, reducerFn } from '../types';
+import { Cars, contextState, reducerFn } from '../types';
+
+const cars: Cars[] = [
+	{
+		_id: '1',
+		src: '/cars/rav4-400.png',
+		price: 6000000,
+		title: 'Toyota Rav 4',
+		mileage: 11000,
+	},
+	{
+		_id: '2',
+		src: '/cars/rav4-400.png',
+		price: 8000000,
+		title: 'Toyota Rav 4',
+		mileage: 3000,
+	},
+	{
+		_id: '3',
+		src: '/cars/rav4-400.png',
+		price: 8500000,
+		title: 'Toyota Rav 4',
+		mileage: 1000,
+	},
+	{
+		_id: '4',
+		src: '/cars/rav4-400.png',
+		price: 6500000,
+		title: 'Toyota Rav 4',
+		mileage: 12100,
+	},
+	{
+		_id: '5',
+		src: '/cars/rav4-400.png',
+		price: 4400000,
+		title: 'Toyota Rav 4',
+		mileage: 28000,
+	},
+];
 
 const initState: contextState = {
-	str: '',
+	cars: cars,
 };
 
 const MyContext = createContext({
@@ -12,8 +50,8 @@ const MyContext = createContext({
 
 const reducer: reducerFn = (state, action) => {
 	switch (action.type) {
-		case '':
-			return { ...state, str: action.payload.str };
+		case 'cars':
+			return { ...state, str: action.payload.cars };
 
 		default:
 			return state;

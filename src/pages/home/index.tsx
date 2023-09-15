@@ -1,29 +1,13 @@
 import { Image } from '@chakra-ui/image';
 import Card from '../../components/card';
-import { Cars } from '../../types';
 import { LoadingHomeBG } from '../../components/loading';
+import { useMyContext } from '../../context';
 
 export default function Home() {
-	const data: Cars[] = [
-		{
-			_id: '1',
-			src: '/cars/rav4-400.png',
-			price: 6000000,
-			title: 'Toyota Rav 4',
-		},
-		{
-			_id: '2',
-			src: '/cars/rav4-400.png',
-			price: 5000000,
-			title: 'Toyota Rav 4',
-		},
-		{
-			_id: '3',
-			src: '/cars/rav4-400.png',
-			price: 4500000,
-			title: 'Toyota Rav 4',
-		},
-	];
+	const {
+		state: { cars },
+	} = useMyContext();
+
 	return (
 		<section className={`w-full flex flex-col items-center justify-center mb-4`}>
 			<div className='flex items-start justify-center w-full lg:justify-end'>
@@ -42,14 +26,15 @@ export default function Home() {
 				</p>
 			</div>
 			<div className='grid w-full gap-4 px-4 md:grid-cols-3 md:grid-rows-3'>
-				{data.length > 0 &&
-					data.map((car) => (
+				{cars.length > 0 &&
+					cars.map((car) => (
 						<Card
 							key={car._id}
 							_id={car._id}
 							src={car.src}
 							title={car.title}
 							price={car.price}
+							mileage={car.mileage}
 						/>
 					))}
 			</div>
