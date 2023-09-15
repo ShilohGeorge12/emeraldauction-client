@@ -15,8 +15,10 @@ export const Footer = () => {
 				<a
 					href='https://emeraldgroupng.com'
 					title='Emerald Leasing Ltd Website'
-					className='text-xl font-semibold transition duration-300 ease-in-out rounded-lg hover:p-2 hover:scale-105 hover:bg-white hover:text-green-600'>
-					Emerald Leasing LTD
+					className='text-xl font-semibold transition duration-300 ease-in-out rounded-lg hover:p-2 hover:scale-105 hover:bg-white hover:text-green-600'
+					target='_blank'
+					rel='noopener noreferrer'>
+					Visit Our Website
 				</a>
 			</div>
 			<address className='w-full text-sm not-italic md:text-base'>

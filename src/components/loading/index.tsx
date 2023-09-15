@@ -11,3 +11,10 @@ export const LoadingHomeBG = () => {
 export const LoadingNavImage = () => {
 	return <div className='w-[144px] h-[47px] bg-green-300 animate-pulse rounded-2xl' />;
 };
+
+export const LoadingMainCar = () => {
+	return <div className={`w-full col-span-2 object-cover border-2 border-green-500 bg-green-300 animate-pulse rounded-2xl`} />;
+};
+export const LoadingOtherCar = ({ width, height }: { width: string; height: string }) => {
+	return <div className={`${width} ${height} col-span-2 object-cover border-2 border-green-500 bg-green-300 animate-pulse rounded-2xl`} />;
+};

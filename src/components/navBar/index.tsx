@@ -17,7 +17,7 @@ export default function NavBar() {
 	};
 
 	return (
-		<nav className={`w-full lg:w-[90%] px-2 lg:px-0 h-[105px] flex items-center justify-between gap-4 sticky top-0 left-0 bg-white/50 backdrop-blur z-10`}>
+		<nav className={`w-full px-2 lg:px-12 h-[105px] flex items-center justify-between gap-4 sticky top-0 left-0 bg-white/50 backdrop-blur z-10`}>
 			<Image
 				src={'/images/emerald_logo_149.png'}
 				alt={'Emerald Leasing LTD'}
