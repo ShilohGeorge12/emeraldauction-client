@@ -19,11 +19,11 @@ export const Footer = () => {
 					Emerald Leasing LTD
 				</a>
 			</div>
-			<address className='text-sm not-italic md:text-base'>
+			<address className='w-full text-sm not-italic md:text-base'>
 				<h3 className='text-lg font-semibold md:text-2xl'>Contact</h3>
 				30A Providence Street Lekki Phase 1 Lekki, Lagos
 			</address>
-			<p className='text-base font-bold tracking-wider md:text-lg'>©2023. Emerald Leasing Limited. All Rights Reserved.</p>
+			<p className='text-xs font-semibold tracking-widest md:text-lg'>©2023. Emerald Leasing Limited. All Rights Reserved.</p>
 		</footer>
 	);
 };
