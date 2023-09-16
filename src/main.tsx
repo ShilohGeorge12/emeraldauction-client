@@ -5,12 +5,12 @@ import { ContextProvider } from './context/index.tsx';
 import { HelmetProvider } from 'react-helmet-async';
 import { AnimatePresence } from 'framer-motion';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
-import './index.css';
 import 'react-toastify/ReactToastify.css';
+import './index.css';
 
 const queryClient = new QueryClient();
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLDivElement).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
 		<AnimatePresence mode='wait'>
 			<ContextProvider>
