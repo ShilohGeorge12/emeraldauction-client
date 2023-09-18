@@ -1,4 +1,3 @@
-// import { useEffect } from "react";
 import { useMyContext } from '../../../context';
 import { useParams } from 'react-router-dom';
 import { Image } from '@chakra-ui/image';
@@ -56,7 +55,7 @@ export default function Car() {
 				description={''}
 				urlPath={`/${carId}`}
 			/>
-			<div className='group relative w-[98%] md:w-[90%] h-[40vh] md:h-[80vh] mx-auto border-2 border-green-500 flex items-center justify-center rounded-2xl transition duration-700 ease-in-out hover:scale-105 hover:shadow-xl hover:shadow-green-300 hover:border-green-300'>
+			<div className='group relative w-[98%] md:w-[90%] h-[40vh] md:h-[80vh] mx-auto border-2 border-green-500 flex items-center justify-center rounded-2xl transition duration-700 ease-in-out hover:scale-105 hover:shadow-xl hover:shadow-green-300 hover:border-green-300 overflow-hidden'>
 				<Image
 					src={import.meta.env.VITE_MODE === 'development' ? `${devUrl}${src[imageSrc]}` : `${prodUrl}${src[imageSrc]}`}
 					title={title}
