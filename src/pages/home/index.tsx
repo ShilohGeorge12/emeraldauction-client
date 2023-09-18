@@ -5,6 +5,7 @@ import { useMyContext } from '../../context';
 import usePagination from '../../hooks/usePagination';
 import { useEffect, useState } from 'react';
 import { UseMetaData } from '../../hooks/useMetaData';
+import { devUrl, prodUrl } from '../../types';
 
 export default function Home() {
 	const {
@@ -28,6 +29,8 @@ export default function Home() {
 	});
 
 	const number = '08151380885';
+	const DevUrl: devUrl = 'http://localhost:33001';
+	const ProdUrl: prodUrl = 'http://localhost:33001';
 
 	return (
 		<section className={`w-full flex flex-col items-center justify-center mb-4`}>
@@ -109,15 +112,14 @@ export default function Home() {
 			</article>
 			<div className='flex items-start justify-center w-full lg:justify-end'>
 				<Image
-					src='/cars/rav4-1024.png'
+					src={import.meta.env.VITE_MODE === 'development' ? `${DevUrl}/cars/rav4-1024.png` : `${ProdUrl}/cars/rav4-1024.png`}
 					alt='__'
-					loading='eager'
 					className={`w-[90%] lg:w-3/4 object-cover fixed right-1 top-[163px] md:top-auto bg-center -z-10 brightness-125`}
 					fallback={<LoadingHomeBG />}
 				/>
 			</div>
 			<div className='md:h-[90vh] h-[40vh] w-full flex justify-start p-1'>
-				<p className='text-sm font-semibold text-green-600 lg:text-2xl w-[310px] md:w-[570px] capitalize md:ml-16 px-1 md:px-0'>
+				<p className='text-sm font-semibold text-green-600 md:text-2xl w-[310px] md:w-[570px] capitalize md:ml-16 px-1 md:px-0'>
 					Rev up your dreams with Emerald Leasing Ltd. Welcome to a world of automotive excellence and exclusive auctions, where your journey to owning quality cars
 					begins.
 				</p>

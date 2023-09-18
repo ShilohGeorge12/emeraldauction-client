@@ -1,5 +1,8 @@
 import { Dispatch, SetStateAction } from 'react';
 
+export type devUrl = 'http://localhost:33001';
+export type prodUrl = 'http://localhost:33001';
+
 export interface contextState {
 	cars: Cars[];
 }

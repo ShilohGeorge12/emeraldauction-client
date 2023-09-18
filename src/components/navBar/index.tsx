@@ -29,7 +29,7 @@ export default function NavBar() {
 				fallback={<LoadingNavImage />}
 			/>
 			{pathname === '/' && (
-				<div className='flex-1 lg:w-1/2 lg:flex-none'>
+				<div className='flex-1 md:w-1/2 md:flex-none'>
 					<SearchBar
 						placeholder={`What're You Looking For`}
 						value={searchValue.get('q') ?? ''}

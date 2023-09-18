@@ -1,5 +1,5 @@
 export const LoadingCard = () => {
-	return <div className='w-[330px] h-[218px] animate-pulse rounded-lg bg-green-300' />;
+	return <div className='w-full h-[218px] animate-pulse rounded-lg bg-green-300' />;
 };
 
 export const LoadingHomeBG = () => {
@@ -13,7 +13,7 @@ export const LoadingNavImage = () => {
 };
 
 export const LoadingMainCar = () => {
-	return <div className={`w-full col-span-2 object-cover border-2 border-green-500 bg-green-300 animate-pulse rounded-2xl`} />;
+	return <div className={`w-full h-full border-green-500 bg-green-300 animate-pulse rounded-2xl`} />;
 };
 export const LoadingOtherCar = ({ width, height }: { width: string; height: string }) => {
 	return <div className={`${width} ${height} col-span-2 object-cover border-2 border-green-500 bg-green-300 animate-pulse rounded-2xl`} />;
